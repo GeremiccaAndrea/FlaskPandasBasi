@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/Es1" method = 'GET'>
+        <input type="submit" value='Es1'>
+    </form>
+
+
+    <form action="/Es2" method = 'GET'>
+        <input type = "text" name = "lingua"> Inserisci lingua: 
+        <input type="submit" value='Es2'>
+    </form>
+
+
+    <form action="/Es3" method = 'GET'>
+        {% for l in lista %}
+        <input type = "radio" name = "lingueRadio" value = "{{l}}"> {{l}}
+        {% endfor %}
+        <input type="submit" value='Es3'>
+    </form>
+
+
+    <form action="/Es4" method = 'GET'>
+        {% for l in lista %}
+        <input type = "checkbox" name = "lingueCheckBox" value = "{{l}}"> {{l}}
+        {% endfor %}
+        <input type="submit" value='Es4'>
+    </form>
+
+</body>
+</html>
